@@ -1,0 +1,14 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Stavka {
+	private long id;
+	private int kolicina;
+	Racun racun;
+	
+	public Stavka(long id, int kolicina) {
+		this.id = id;
+		this.kolicina = kolicina;
+		
+	}
+
+}

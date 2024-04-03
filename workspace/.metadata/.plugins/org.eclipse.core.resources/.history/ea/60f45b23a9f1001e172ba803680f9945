@@ -1,0 +1,43 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Soba {
+	private long id;
+	private int brojKreveta;
+	private double cenaNocenja;
+	
+	//konstruktori
+	public Soba(long id, int brojKreveta, double cenaNocenja) {
+		super();
+		this.id = id;
+		this.brojKreveta = brojKreveta;
+		this.cenaNocenja = cenaNocenja;
+	}
+	public Soba(int brojKreveta, double cenaNocenja) {
+		this(0, brojKreveta, cenaNocenja);
+	}
+	public Soba() {
+		this(0, 0, 0.0);
+	}
+	
+	//getteri i setteri
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public int getBrojKreveta() {
+		return brojKreveta;
+	}
+	public void setBrojKreveta(int brojKreveta) {
+		this.brojKreveta = brojKreveta;
+	}
+	public double getCenaNocenja() {
+		return cenaNocenja;
+	}
+	public void setCenaNocenja(double cenaNocenja) {
+		this.cenaNocenja = cenaNocenja;
+	}
+	
+
+}

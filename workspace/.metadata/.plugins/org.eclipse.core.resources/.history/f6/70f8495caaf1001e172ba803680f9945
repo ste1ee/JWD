@@ -1,0 +1,24 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Rezervacija {
+	private long id;
+	private String datum;
+	private String vremeUlaska;
+	private String imeIPrezimeGosta;
+	
+	//konstruktori
+	public Rezervacija(long id, String datum, String vremeUlaska, String imeIPrezimeGosta) {
+		super();
+		this.id = id;
+		this.datum = datum;
+		this.vremeUlaska = vremeUlaska;
+		this.imeIPrezimeGosta = imeIPrezimeGosta;
+	}
+	public Rezervacija(String datum, String vremeUlaska, String imeIPrezimeGosta) {
+		this(0, datum, vremeUlaska, imeIPrezimeGosta);
+	}
+	public Rezervacija() {
+		this(0, null, "", "");
+	}
+
+}

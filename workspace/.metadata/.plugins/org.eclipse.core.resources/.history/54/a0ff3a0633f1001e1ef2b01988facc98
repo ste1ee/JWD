@@ -1,0 +1,14 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Racun {
+	private long id;
+	private String datum;
+	private double cena;
+	
+	public Racun(long id, String datum, double cena) {
+		this.id = id;
+		this.datum = datum;
+		this.cena = cena;
+	}
+
+}

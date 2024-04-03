@@ -1,0 +1,23 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class SadrzajSobe {
+	private long id;
+	private boolean posteljina;
+	private boolean klima;
+	
+	//konstruktori
+	public SadrzajSobe(long id, boolean posteljina, boolean klima) {
+		super();
+		this.id = id;
+		this.posteljina = posteljina;
+		this.klima = klima;
+	}
+	public SadrzajSobe(boolean posteljina, boolean klima) {
+		this(0, posteljina, klima);
+	}
+	public SadrzajSobe() {
+		this(0, false, false);
+	}
+	
+
+}

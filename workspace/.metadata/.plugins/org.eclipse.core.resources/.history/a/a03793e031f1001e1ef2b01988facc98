@@ -1,0 +1,8 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Racun {
+	long id;
+	String datum;
+	double cena;
+
+}

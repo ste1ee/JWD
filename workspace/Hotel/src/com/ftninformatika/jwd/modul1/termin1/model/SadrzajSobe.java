@@ -1,0 +1,48 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class SadrzajSobe {
+	private long id;
+	private boolean posteljina;
+	private boolean klima;
+	
+	//konstruktori
+	public SadrzajSobe(long id, boolean posteljina, boolean klima) {
+		super();
+		this.id = id;
+		this.posteljina = posteljina;
+		this.klima = klima;
+	}
+	public SadrzajSobe(boolean posteljina, boolean klima) {
+		this(0, posteljina, klima);
+	}
+	public SadrzajSobe() {
+		this(0, false, false);
+	}
+	//getteri i setteri
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public boolean isPosteljina() {
+		return posteljina;
+	}
+	public void setPosteljina(boolean posteljina) {
+		this.posteljina = posteljina;
+	}
+	public boolean isKlima() {
+		return klima;
+	}
+	public void setKlima(boolean klima) {
+		this.klima = klima;
+	}
+	@Override
+	public String toString() {
+		return "SadrzajSobe [id=" + id + ", posteljina=" + posteljina + ", klima=" + klima + "]";
+	}
+	
+	
+	
+
+}
