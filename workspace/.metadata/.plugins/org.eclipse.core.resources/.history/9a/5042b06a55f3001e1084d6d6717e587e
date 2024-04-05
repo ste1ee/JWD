@@ -1,0 +1,8 @@
+package com.ftninformatika.jwd.modul1.termin3.modelovanje;
+
+public class Stavka {
+	private long id;
+	private int kolicina;
+	Proizvod proizvod;
+
+}

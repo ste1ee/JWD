@@ -1,0 +1,10 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Prodavnica {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

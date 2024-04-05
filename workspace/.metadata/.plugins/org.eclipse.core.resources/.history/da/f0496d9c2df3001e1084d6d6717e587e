@@ -1,0 +1,47 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+import java.time.LocalDateTime;
+
+public class Rezervacija {
+	private long id;
+	private LocalDateTime datumIVremeUlaska;
+	private String imeIPrezimeGosta;
+	
+	//konstruktori
+	public Rezervacija(long id, LocalDateTime datumIVremeUlaska, String imeIPrezimeGosta) {
+		super();
+		this.id = id;
+		this.datumIVremeUlaska = datumIVremeUlaska;
+		this.imeIPrezimeGosta = imeIPrezimeGosta;
+	}
+	public Rezervacija(LocalDateTime datumIVremeUlaska, String imeIPrezimeGosta) {
+		this(0, datumIVremeUlaska, imeIPrezimeGosta);
+	}
+	public Rezervacija() {
+		this(0, null, "");
+	}
+	
+	//getteri i setteri
+	public long getId() {
+		return id;
+	}
+	
+	public LocalDateTime getDatumIVremeUlaska() {
+		return datumIVremeUlaska;
+	}
+	
+	public void setDatumIVremeUlaska(LocalDateTime datumIVremeUlaska) {
+		this.datumIVremeUlaska = datumIVremeUlaska;
+	}
+
+	public String getImeIPrezimeGosta() {
+		return imeIPrezimeGosta;
+	}
+	public void setImeIPrezimeGosta(String imeIPrezimeGosta) {
+		this.imeIPrezimeGosta = imeIPrezimeGosta;
+	}
+	
+	
+	
+
+}

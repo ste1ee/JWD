@@ -1,0 +1,44 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Stavka {
+	private long id;
+	private int kolicina;
+	Proizvod proizvod;
+	
+	
+	public Stavka(long id, int kolicina, Proizvod proizvod) {
+		this.id = id;
+		this.kolicina = kolicina;
+		this.proizvod = proizvod;
+	}
+	public Stavka(int kolicina, Proizvod proizvod) {
+		this(0, kolicina, proizvod);
+	}
+	public Stavka() {
+		this(0, 0, null);
+	}
+	
+	public void dodajKolicinuProizvoda(int dodajProizvod) {
+		this.kolicina += dodajProizvod;
+	}
+	
+	public void umanjiKolicinuProizvoda(int umanjiKolicinu) {
+		this.kolicina -= umanjiKolicinu;
+	}
+	
+	public long getId() {
+		return id;
+	}
+	public int getKolicina() {
+		return kolicina;
+	}
+	
+	public void setKolicina(int kolicina) {
+		this.kolicina = kolicina;
+	}
+	
+	
+	
+	
+
+}

@@ -1,0 +1,68 @@
+package com.ftninformatika.jwd.modul1.termin3.modelovanje;
+
+import java.util.Objects;
+
+public class Stavka {
+	private long id;
+	private int kolicina;
+	Proizvod proizvod;
+	
+	//konstruktori
+	public Stavka(long id, int kolicina) {
+		super();
+		this.id = id;
+		this.kolicina = kolicina;
+	}
+	public Stavka(int kolicina) {
+		this(0, kolicina);
+	}
+	public Stavka() {
+		this(0, 0);
+	}
+	
+	//hashcode
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Stavka other = (Stavka) obj;
+		return id == other.id;
+	}
+	
+	
+	//metoda za povezivanje
+	public void dodajProizvod(Proizvod proizvod) {
+		this.proizvod = proizvod;
+
+	}
+	public void ukloniProizvod(Proizvod proizvod) {
+		this.proizvod = null;
+	}
+	
+	
+	//getteri i setteri
+	public int getKolicina() {
+		return kolicina;
+	}
+	public void setKolicina(int kolicina) {
+		this.kolicina = kolicina;
+	}
+	public long getId() {
+		return id;
+	}
+	
+	
+	
+	
+	
+	
+
+}

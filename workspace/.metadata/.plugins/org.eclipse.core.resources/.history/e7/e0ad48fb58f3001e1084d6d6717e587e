@@ -1,0 +1,10 @@
+package com.ftninformatika.jwd.modul1.termin3.modelovanje;
+
+import java.time.LocalDateTime;
+
+public class Racun {
+	private long id;
+	private LocalDateTime datum;
+	private double ukupnaCena;
+
+}

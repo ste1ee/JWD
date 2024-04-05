@@ -1,5 +1,7 @@
 package com.ftninformatika.jwd.modul1.termin1.model;
 
+import java.util.Objects;
+
 public class SadrzajSobe {
 	private long id;
 	private boolean posteljina;
@@ -18,12 +20,27 @@ public class SadrzajSobe {
 	public SadrzajSobe() {
 		this(0, false, false);
 	}
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SadrzajSobe other = (SadrzajSobe) obj;
+		return id == other.id;
+	}
+	
 	//getteri i setteri
 	public long getId() {
 		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
 	}
 	public boolean isPosteljina() {
 		return posteljina;

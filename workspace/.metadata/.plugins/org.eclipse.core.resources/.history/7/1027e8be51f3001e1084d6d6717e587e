@@ -1,0 +1,67 @@
+package com.ftninformatika.jwd.modul1.termin3.modelovanje;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+import com.ftninformatika.jwd.modul1.termin1.model.Proizvod;
+
+public class Kategorija {
+	private long id;
+	private String naziv;
+	final Set<Proizvod> proizvodii = new HashSet<>();
+	
+	
+	public Kategorija(long id, String naziv) {
+		super();
+		this.id = id;
+		this.naziv = naziv;
+	}
+	public Kategorija(String naziv) {
+		this(0, naziv);
+	}
+	public Kategorija() {
+		this(0, "");
+	}
+	
+	
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Kategorija other = (Kategorija) obj;
+		return id == other.id;
+	}
+	
+	public Collection<Proizvod> getProizvodii() {
+		return Collections.unmodifiableCollection(this.proizvodii);
+	}
+	
+	
+	
+	
+	
+	public String getNaziv() {
+		return naziv;
+	}
+	public void setNaziv(String naziv) {
+		this.naziv = naziv;
+	}
+	public long getId() {
+		return id;
+	}
+	
+
+}

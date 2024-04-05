@@ -1,5 +1,7 @@
 package com.ftninformatika.jwd.modul1.termin1.model;
 
+import java.util.Objects;
+
 public class Prenociste {
 	private long id;
 	private double cena;
@@ -20,6 +22,22 @@ public class Prenociste {
 	}
 	
 	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Prenociste other = (Prenociste) obj;
+		return id == other.id;
+	}
 	//getteri i setteri
 	public long getId() {
 		return id;
@@ -43,6 +61,7 @@ public class Prenociste {
 	public String toString() {
 		return "Prenociste [id=" + id + ", cena=" + cena + ", brojZvezdica=" + brojZvezdica + "]";
 	}
+	
 	
 	
 	

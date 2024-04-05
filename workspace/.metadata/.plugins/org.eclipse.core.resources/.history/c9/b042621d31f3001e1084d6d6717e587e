@@ -1,0 +1,44 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.HashSet;
+import java.util.Set;
+
+public class HotelTest {
+	
+	private static final String DATE_TIME_FORMAT = "dd.MM.yyyy. HH:mm";
+	private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern(DATE_TIME_FORMAT);
+	
+	public static String datumUString(LocalDateTime datum) {
+		return DATE_TIME_FORMATTER.format(datum);
+	}
+	
+	public static LocalDateTime stringUDatum(String datum) {
+		return LocalDateTime.parse(datum, DATE_TIME_FORMATTER);
+	}
+	
+	public static final Set<Prenociste> prenocista = new HashSet<>();
+	public static final Set<SadrzajSobe> sadrzajiSoba = new HashSet<>();
+	public static final Set<Soba> sobe = new HashSet<>();
+	public static final Set<Rezervacija> rezervacije = new HashSet<>();
+	
+	
+	public static void inicijalizacija() {
+		Prenociste prenociste1 = new Prenociste();
+		Prenociste prenociste2 = new Prenociste();
+		Prenociste prenociste3 = new Prenociste();
+		Prenociste prenociste4 = new Prenociste();
+		Prenociste prenociste5 = new Prenociste();
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

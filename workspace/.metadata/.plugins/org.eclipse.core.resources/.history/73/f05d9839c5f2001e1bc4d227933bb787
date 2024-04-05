@@ -1,0 +1,16 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+import java.time.format.DateTimeFormatter;
+
+public class Prodavnica {
+	
+	
+	private final static String DATE_TIME_FORMAT = "dd.MM.yyyy. HH.mm";
+	private final static DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern(DATE_TIME_FORMAT);
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

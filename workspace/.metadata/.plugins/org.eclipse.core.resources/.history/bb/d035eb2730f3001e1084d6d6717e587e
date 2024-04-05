@@ -1,0 +1,24 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class HotelTest {
+	
+	private static final String DATE_TIME_FORMAT = "dd.MM.yyyy. HH:mm";
+	private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern(DATE_TIME_FORMAT);
+	
+	public static String datumUString(LocalDateTime datum) {
+		return DATE_TIME_FORMATTER.format(datum);
+	}
+	
+	public static LocalDateTime stringUDatum(String datum) {
+		return LocalDateTime.parse(datum, DATE_TIME_FORMATTER);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

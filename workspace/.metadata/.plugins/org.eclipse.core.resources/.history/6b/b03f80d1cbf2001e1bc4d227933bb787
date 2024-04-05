@@ -1,0 +1,48 @@
+package com.ftninformatika.jwd.modul1.termin1.model;
+
+public class Kategorija {
+	private long id;
+	private String naziv;
+	
+	
+	public Kategorija(long id, String naziv) {
+		this.id = id;
+		this.naziv = naziv;
+	}
+	public Kategorija(String naziv) {
+		this(0,naziv);
+	}
+	public Kategorija() {
+		this(0,"");
+	}
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Kategorija [id=" + id + ", " + naziv + "]";
+	}
+	
+	
+	
+	
+	public long getId() {
+		return id;
+	}
+	public String getNaziv() {
+		return naziv;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	public void setNaziv(String naziv) {
+		this.naziv = naziv;
+	}
+	
+	
+	
+
+}

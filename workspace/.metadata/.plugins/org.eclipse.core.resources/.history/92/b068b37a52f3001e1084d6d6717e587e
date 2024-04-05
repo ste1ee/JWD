@@ -1,0 +1,92 @@
+package com.ftninformatika.jwd.modul1.termin3.modelovanje;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+public class Proizvod {
+	private long id;
+	private String naziv;
+	private double cena;
+	final Set<Kategorija> kategorijee = new HashSet<>();
+	
+	
+	public Proizvod(long id, String naziv, double cena) {
+		super();
+		this.id = id;
+		this.naziv = naziv;
+		this.cena = cena;
+	}
+	public Proizvod(String naziv, double cena) {
+		this(0, naziv, cena);
+	}
+	public Proizvod() {
+		this(0, "", 0.0);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Proizvod other = (Proizvod) obj;
+		return id == other.id;
+	}
+	
+	
+	
+	
+	
+	public Collection<Kategorija> getKategorijee() {
+		return Collections.unmodifiableCollection(this.kategorijee);
+	}
+	
+	
+	public void dodajKategoriju(Kategorija kategorija) {
+		this.kategorijee.add(kategorija);
+		kategorija.proizvodii.add(this);
+	}
+	
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getNaziv() {
+		return naziv;
+	}
+	public void setNaziv(String naziv) {
+		this.naziv = naziv;
+	}
+	public double getCena() {
+		return cena;
+	}
+	public void setCena(double cena) {
+		this.cena = cena;
+	}
+	
+	
+	
+	
+	
+
+}

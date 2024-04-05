@@ -1,0 +1,139 @@
+package com.ftninformatika.jwd.modul1.termin3.modelovanje;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.time.LocalDateTime;
+
+
+public class Test {
+	
+	
+	private static final Set<Kategorija> kategorije = new HashSet<>();
+	private static final Set<Proizvod> proizvodi = new HashSet<>();
+	private static final Set<Racun> racuni = new HashSet<>();
+	private static final Set<Stavka> stavke = new HashSet<>();
+
+	
+private static void da() {
+		
+		Kategorija kategorija1 = new Kategorija(1, "Decija garderoba");
+		Kategorija kategorija2 = new Kategorija(2, "Muska garderoba");
+		Kategorija kategorija3 = new Kategorija(3, "Zenska garderoba");
+		Kategorija kategorija4 = new Kategorija(4, "Decije cipele");
+		Kategorija kategorija5 = new Kategorija(5, "Muske cipele");
+		
+		kategorije.add(kategorija1);
+		kategorije.add(kategorija2);
+		kategorije.add(kategorija3);
+		kategorije.add(kategorija4);
+		kategorije.add(kategorija5);
+		
+		Proizvod proizvod1 = new Proizvod(1, "Decije pantalone", 1999.99);
+		Proizvod proizvod2 = new Proizvod(2, "Muska jakna", 5459.99);
+		Proizvod proizvod3 = new Proizvod(3, "Zenska haljina", 3299.99);
+		Proizvod proizvod4 = new Proizvod(4, "Muske patike par", 7199.99);
+		Proizvod proizvod5 = new Proizvod(5, "Zenske sandale par", 2354.00);
+		Proizvod proizvod6 = new Proizvod(6, "Muska majica", 840.00);
+		Proizvod proizvod7 = new Proizvod(7, "Decija jakna", 2899.99);
+		Proizvod proizvod8 = new Proizvod(8, "Zenske pantalone", 1699.99);
+		Proizvod proizvod9 = new Proizvod(9, "Zenska marama", 359.99);
+		Proizvod proizvod10 = new Proizvod(10, "Muske carape par", 120.00);
+		
+		proizvodi.add(proizvod1);
+		proizvodi.add(proizvod2);
+		proizvodi.add(proizvod3);
+		proizvodi.add(proizvod4);
+		proizvodi.add( proizvod5);
+		proizvodi.add( proizvod6);
+		proizvodi.add( proizvod7);
+		proizvodi.add( proizvod8);
+		proizvodi.add( proizvod9);
+		proizvodi.add( proizvod10);
+		
+		Racun racun1 = new Racun(1, LocalDateTime.now(), 0.0);
+		Racun racun2 = new Racun(2, LocalDateTime.now(), 0.0);
+		Racun racun3 = new Racun(3, LocalDateTime.now(), 0.0);
+		Racun racun4 = new Racun(4, LocalDateTime.now(), 0.0);
+		Racun racun5 = new Racun(5, LocalDateTime.now(), 0.0);
+		
+		racuni.add( racun1);
+		racuni.add( racun2);
+		racuni.add( racun3);
+		racuni.add( racun4);
+		racuni.add( racun5);
+		
+		Stavka stavka1 = new Stavka(1, 1, racun1);
+		Stavka stavka2 = new Stavka(2, 2, racun1);
+		Stavka stavka3 = new Stavka(3, 15, racun2);
+		Stavka stavka4 = new Stavka(4, 1, racun2);
+		Stavka stavka5 = new Stavka(5, 4, racun3);
+		Stavka stavka6 = new Stavka(6, 5, racun3);
+		Stavka stavka7 = new Stavka(7, 2, racun4);
+		Stavka stavka8 = new Stavka(8, 1, racun5);
+		Stavka stavka9 = new Stavka(9, 2, racun5);
+		Stavka stavka10 = new Stavka(10, 1, racun5);
+		
+		stavke.add( stavka1);
+		stavke.add( stavka2);
+		stavke.add( stavka3);
+		stavke.add( stavka4);
+		stavke.add( stavka5);
+		stavke.add( stavka6);
+		stavke.add( stavka7);
+		stavke.add( stavka8);
+		stavke.add( stavka9);
+		stavke.add( stavka10);
+		
+		
+		proizvod1.dodajKategoriju(kategorija1);
+		proizvod2.dodajKategoriju(kategorija2);
+		proizvod3.dodajKategoriju(kategorija3);
+		proizvod4.dodajKategoriju(kategorija4);
+		proizvod5.dodajKategoriju(kategorija5);
+		proizvod1.dodajKategoriju(kategorija2);
+		proizvod2.dodajKategoriju(kategorija1);
+		proizvod3.dodajKategoriju(kategorija5);
+		proizvod4.dodajKategoriju(kategorija3);
+		proizvod5.dodajKategoriju(kategorija4);
+		
+		
+		racun1.dodajStavku(stavka4);
+		racun1.dodajStavku(stavka6);
+		racun1.dodajStavku(stavka1);
+		racun2.dodajStavku(stavka2);
+		racun2.dodajStavku(stavka8);
+		racun2.dodajStavku(stavka7);
+		racun2.dodajStavku(stavka5);
+		racun3.dodajStavku(stavka6);
+		racun3.dodajStavku(stavka10);
+		racun3.dodajStavku(stavka9);
+		racun3.dodajStavku(stavka2);
+		racun4.dodajStavku(stavka5);
+		racun5.dodajStavku(stavka7);
+		racun5.dodajStavku(stavka8);
+		
+	
+}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		da();
+		for(Kategorija k : kategorije) {
+			System.out.println(k);
+		}
+		System.out.println(" ");
+		for(Proizvod p : proizvodi) {
+			System.out.println(p);
+		}
+		System.out.println(" ");
+		for(Stavka s : stavke) {
+			System.out.println(s);
+		}
+		System.out.println(" ");
+		for(Racun r : racuni) {
+			System.out.println(r);
+		}
+
+	}
+
+}

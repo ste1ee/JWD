@@ -1,20 +1,63 @@
 package com.ftninformatika.jwd.modul1.termin1.model;
 
+import java.util.Objects;
+
 public class Stavka {
 	private long id;
 	private int kolicina;
-	Racun racun;
+	Proizvod proizvod;
 	
-	public Stavka(long id, int kolicina) {
+	
+	public Stavka(long id, int kolicina, Proizvod proizvod) {
 		this.id = id;
 		this.kolicina = kolicina;
+		this.proizvod = proizvod;
 	}
-	public Stavka(int kolicina) {
-		this(0,kolicina);
+	public Stavka(int kolicina, Proizvod proizvod) {
+		this(0, kolicina, proizvod);
 	}
 	public Stavka() {
-		this(0,0);
+		this(0, 0, null);
 	}
+	
+	public void dodajKolicinuProizvoda(int dodajProizvod) {
+		this.kolicina += dodajProizvod;
+	}
+	
+	public void umanjiKolicinuProizvoda(int umanjiKolicinu) {
+		this.kolicina -= umanjiKolicinu;
+	}
+	
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Stavka other = (Stavka) obj;
+		return id == other.id;
+	}
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Stavka [id=" + id + ", kolicina=" + kolicina + ", proizvod=" + proizvod + "]";
+	}
+	
+	
 	
 	public long getId() {
 		return id;
@@ -22,23 +65,21 @@ public class Stavka {
 	public int getKolicina() {
 		return kolicina;
 	}
-	public Racun getRacun() {
-		return racun;
-	}
 	
-	public void setId(long id) {
-		this.id = id;
-	}
 	public void setKolicina(int kolicina) {
 		this.kolicina = kolicina;
 	}
-	public void setRacun(Racun racun) {
-		this.racun = racun;
+	
+	
+	public Proizvod getProizvod() {
+		return proizvod;
 	}
-	@Override
-	public String toString() {
-		return "Stavka [id=" + id + ", kolicina=" + kolicina + ", racun=" + racun + "]";
+	public void setProizvod(Proizvod proizvod) {
+		this.proizvod = proizvod;
 	}
+	
+	
+	
 	
 	
 	
