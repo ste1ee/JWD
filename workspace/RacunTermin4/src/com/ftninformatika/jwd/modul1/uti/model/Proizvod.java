@@ -10,7 +10,7 @@ public class Proizvod {
 	private long id;
 	private String naziv;
 	private double cena;
-	
+
 	final Set<Kategorija> kategorije = new HashSet<>();
 
 	public Proizvod(long id, String naziv, double cena) {
@@ -19,15 +19,13 @@ public class Proizvod {
 		this.naziv = naziv;
 		this.cena = cena;
 	}
-	
+
 	public Proizvod() {
 		super();
 		this.id = 0;
 		this.naziv = "";
 		this.cena = 0.0;
 	}
-	
-	
 
 	@Override
 	public int hashCode() {
@@ -45,8 +43,6 @@ public class Proizvod {
 		Proizvod other = (Proizvod) obj;
 		return id == other.id;
 	}
-	
-	
 
 	@Override
 	public String toString() {
@@ -76,24 +72,21 @@ public class Proizvod {
 	public Collection<Kategorija> getKategorije() {
 		return Collections.unmodifiableCollection(kategorije);
 	}
-	
+
 	public void addKategorija(Kategorija kategorija) {
 		this.kategorije.add(kategorija);
 	}
-	
+
 	public void addAllKategorije(Collection<Kategorija> kategorije) {
 		this.kategorije.addAll(kategorije);
 	}
-	
+
 	public void removeKategorija(Kategorija kategorija) {
 		this.kategorije.remove(kategorija);
 	}
-	
+
 	public void removeAllKategorije() {
 		this.kategorije.clear();
 	}
-	
-	
-	
 
 }

@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Stavka {
 	private long id;
 	private int kolicina;
-	
+
 	Proizvod proizvod;
 
 	public Stavka(long id, int kolicina) {
@@ -13,14 +13,12 @@ public class Stavka {
 		this.id = id;
 		this.kolicina = kolicina;
 	}
-	
+
 	public Stavka() {
 		super();
 		this.id = 0;
 		this.kolicina = 0;
 	}
-	
-	
 
 	@Override
 	public int hashCode() {
@@ -38,8 +36,6 @@ public class Stavka {
 		Stavka other = (Stavka) obj;
 		return id == other.id;
 	}
-	
-	
 
 	@Override
 	public String toString() {
@@ -65,15 +61,13 @@ public class Stavka {
 	public void setProizvod(Proizvod proizvod) {
 		this.proizvod = proizvod;
 	}
-	
+
 	public void povecajKolicinuZa(int koliko) {
 		this.kolicina += koliko;
 	}
-	
+
 	public void smanjiKolicinuZa(int koliko) {
 		this.kolicina -= koliko;
 	}
-	
-	
 
 }

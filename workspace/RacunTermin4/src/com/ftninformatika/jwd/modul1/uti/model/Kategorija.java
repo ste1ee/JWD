@@ -5,21 +5,18 @@ import java.util.Objects;
 public class Kategorija {
 	private long id;
 	private String naziv;
-	
-	
+
 	public Kategorija(long id, String naziv) {
 		super();
 		this.id = id;
 		this.naziv = naziv;
 	}
-	
+
 	public Kategorija() {
 		super();
 		this.id = 0;
 		this.naziv = "";
 	}
-	
-	
 
 	@Override
 	public int hashCode() {
@@ -37,8 +34,6 @@ public class Kategorija {
 		Kategorija other = (Kategorija) obj;
 		return id == other.id;
 	}
-	
-	
 
 	@Override
 	public String toString() {
@@ -49,7 +44,6 @@ public class Kategorija {
 		return id;
 	}
 
-
 	public String getNaziv() {
 		return naziv;
 	}
@@ -57,9 +51,5 @@ public class Kategorija {
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;
 	}
-	
-	
-	
-
 
 }

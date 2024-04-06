@@ -12,50 +12,41 @@ public class Application {
 
 	public static void main(String[] args) throws Exception {
 		Prodavnica.ucitaj();
-		
+
 		Meni.pokreni("Prodavnica", new StavkaMenija[] {
-				
-			new IzlaznaStavkaMenija("Izlaz"),
-			new FunkcionalnaStavkaMenija("Kategorija") {
-				
-				@Override
-				public void izvrsi() {
-					KategorijaUI.meni();
-					
-				}
-			},
-			new FunkcionalnaStavkaMenija("Proizvod") {
-				
-				@Override
-				public void izvrsi() {
-					// TODO Auto-generated method stub
-					
-				}
-			},
-			new FunkcionalnaStavkaMenija("Stavka") {
-				
-				@Override
-				public void izvrsi() {
-					// TODO Auto-generated method stub
-					
-				}
-			},
-			new FunkcionalnaStavkaMenija("Racun") {
-				
-				@Override
-				public void izvrsi() {
-					// TODO Auto-generated method stub
-					
-				}
-			},
-			
-				
-				
-				
-				
+
+				new IzlaznaStavkaMenija("Izlaz"), new FunkcionalnaStavkaMenija("Kategorija") {
+
+					@Override
+					public void izvrsi() {
+						KategorijaUI.meni();
+
+					}
+				}, new FunkcionalnaStavkaMenija("Proizvod") {
+
+					@Override
+					public void izvrsi() {
+						// TODO Auto-generated method stub
+
+					}
+				}, new FunkcionalnaStavkaMenija("Stavka") {
+
+					@Override
+					public void izvrsi() {
+						// TODO Auto-generated method stub
+
+					}
+				}, new FunkcionalnaStavkaMenija("Racun") {
+
+					@Override
+					public void izvrsi() {
+						// TODO Auto-generated method stub
+
+					}
+				},
+
 		});
-	
-		
+
 	}
 
 }

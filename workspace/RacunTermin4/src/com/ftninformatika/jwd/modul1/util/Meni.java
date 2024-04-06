@@ -7,8 +7,8 @@ import java.util.NoSuchElementException;
  * ispis putem {@code System.out} standardnog <i>stream</i>-a i unos putem
  * {@code System.in} standardnog <i>stream</i>-a.
  *
- * @author  Miloš Beočanin ({@link www.ftninformatika.com})
- * @see     com.ftninformatika.jwd.modul1.termiin4. util.Meni.StavkaMenija
+ * @author Miloš Beočanin ({@link www.ftninformatika.com})
+ * @see com.ftninformatika.jwd.modul1.termiin4. util.Meni.StavkaMenija
  * 
  */
 public class Meni {
@@ -16,12 +16,12 @@ public class Meni {
 	/**
 	 * Superklasa svih stavki menija.
 	 * 
-	 * @author  Miloš Beočanin ({@link www.ftninformatika.com})
-	 * @see     com.ftninformatika.jwd.modul1.termiin4. util.Meni
+	 * @author Miloš Beočanin ({@link www.ftninformatika.com})
+	 * @see com.ftninformatika.jwd.modul1.termiin4. util.Meni
 	 * 
 	 */
 	public static abstract class StavkaMenija {
-	
+
 		private final String tekst;
 
 		public StavkaMenija(String tekst) throws IllegalArgumentException {
@@ -34,7 +34,7 @@ public class Meni {
 
 			this.tekst = tekst;
 		}
-		
+
 		private String formatiraj(int redniBroj) {
 			return String.format("%s. %s", redniBroj, tekst);
 		}
@@ -44,20 +44,20 @@ public class Meni {
 	/**
 	 * Klasa koja opisuje jednu izlaznu stavku menija konzolne aplikacije.
 	 * 
-	 * @author  Miloš Beočanin ({@link www.ftninformatika.com})
-	 * @see     com.ftninformatika.jwd.modul1.termiin4. util.Meni
+	 * @author Miloš Beočanin ({@link www.ftninformatika.com})
+	 * @see com.ftninformatika.jwd.modul1.termiin4. util.Meni
 	 * 
 	 */
 	public static class IzlaznaStavkaMenija extends StavkaMenija {
-	    /**
-	     * Kreira novu izlaznu stavku sa zadatim tekstom.
-	     *
-	     * @param      tekst   Tekst stavke koji će biti prikazan
-	     *
-	     * @throws  IllegalArgumentException Ako je {@code tekst} {@code null}
-	     *          ili je prazan
-	     * 
-	     */
+		/**
+		 * Kreira novu izlaznu stavku sa zadatim tekstom.
+		 *
+		 * @param tekst Tekst stavke koji će biti prikazan
+		 *
+		 * @throws IllegalArgumentException Ako je {@code tekst} {@code null} ili je
+		 *                                  prazan
+		 * 
+		 */
 		public IzlaznaStavkaMenija(String tekst) throws IllegalArgumentException {
 			super(tekst);
 		}
@@ -67,35 +67,35 @@ public class Meni {
 	/**
 	 * Klasa koja opisuje i izvršava jednu stavku menija konzolne aplikacije.
 	 * 
-	 * @author  Miloš Beočanin ({@link www.ftninformatika.com})
-	 * @see     com.ftninformatika.jwd.modul1.termiin4. util.Meni
+	 * @author Miloš Beočanin ({@link www.ftninformatika.com})
+	 * @see com.ftninformatika.jwd.modul1.termiin4. util.Meni
 	 * 
 	 */
 	public static abstract class FunkcionalnaStavkaMenija extends StavkaMenija {
-	    /**
-	     * Kreira novu funkcionalnu stavku sa zadatim tekstom.
-	     *
-	     * @param      tekst   Tekst stavke koji će biti prikazan
-	     *
-	     * @throws  IllegalArgumentException Ako je {@code tekst} {@code null}
-	     *          ili je prazan
-	     * 
-	     */
+		/**
+		 * Kreira novu funkcionalnu stavku sa zadatim tekstom.
+		 *
+		 * @param tekst Tekst stavke koji će biti prikazan
+		 *
+		 * @throws IllegalArgumentException Ako je {@code tekst} {@code null} ili je
+		 *                                  prazan
+		 * 
+		 */
 		public FunkcionalnaStavkaMenija(String tekst) throws IllegalArgumentException {
 			super(tekst);
 		}
 
-	    /**
-	     * Metoda koja definiše ponašanje u slučaju odabira ove stavke.
-	     * 
-	     */
+		/**
+		 * Metoda koja definiše ponašanje u slučaju odabira ove stavke.
+		 * 
+		 */
 		public abstract void izvrsi();
-		
+
 	}
 
 	private final StavkaMenija[] stavke;
 	private final StringBuilder meni = new StringBuilder();
-	
+
 	private void dodajPrazanRed() {
 		meni.append(System.lineSeparator());
 	}
@@ -116,19 +116,19 @@ public class Meni {
 		meni.append("=".repeat(duzina));
 	}
 
-    /**
-     * Kreira novi meni sa zadatim naslovom i nizom stavki. Stavke će dobiti
-     * redni broj na osnovu njihovog indeksa u nizu {@code stavke}.
-     *
-     * @param      naslov   Naslov koji će biti prikazan
-     * @param      stavke   Niz objekata klase {@code StavkaMenija} koji opisuju
-     *                      stavke
-     *
-     * @throws  IllegalArgumentException Ako su {@code naslov} ili
-     *          {@code stavke} {@code null} ili ako su prazni, ili ako atribut
-     *          {@code izlaz} za bar jednu stavku nije {@code true}
-     *
-     */
+	/**
+	 * Kreira novi meni sa zadatim naslovom i nizom stavki. Stavke će dobiti redni
+	 * broj na osnovu njihovog indeksa u nizu {@code stavke}.
+	 *
+	 * @param naslov Naslov koji će biti prikazan
+	 * @param stavke Niz objekata klase {@code StavkaMenija} koji opisuju stavke
+	 *
+	 * @throws IllegalArgumentException Ako su {@code naslov} ili {@code stavke}
+	 *                                  {@code null} ili ako su prazni, ili ako
+	 *                                  atribut {@code izlaz} za bar jednu stavku
+	 *                                  nije {@code true}
+	 *
+	 */
 	private Meni(String naslov, StavkaMenija[] stavke) throws IllegalArgumentException {
 		if (naslov == null) {
 			throw new IllegalArgumentException("naslov je null");
@@ -143,12 +143,12 @@ public class Meni {
 			throw new IllegalArgumentException("stavke su prazne");
 		}
 		boolean izlaz = false;
-		for (StavkaMenija itStavka: stavke)
+		for (StavkaMenija itStavka : stavke)
 			izlaz = izlaz || itStavka instanceof IzlaznaStavkaMenija;
 		if (!izlaz) {
 			throw new IllegalArgumentException("izlaz za bar jednu stavku menija nije true");
 		}
-		
+
 		this.stavke = stavke;
 
 		String[] formatiraneStavke = new String[stavke.length];
@@ -156,14 +156,14 @@ public class Meni {
 			formatiraneStavke[it] = this.stavke[it].formatiraj(it);
 
 		int duzinaReda = 0;
-		for (String itRed: formatiraneStavke)
+		for (String itRed : formatiraneStavke)
 			duzinaReda = Math.max(duzinaReda, itRed.length());
-	
+
 		dodajPrazanRed();
 		dodajNaslov(naslov);
-		
+
 		dodajPrazanRed();
-		for (String itStavka: formatiraneStavke)
+		for (String itStavka : formatiraneStavke)
 			dodajStavku(itStavka);
 		dodajHorizontalnuLiniju(duzinaReda);
 	}
@@ -192,26 +192,24 @@ public class Meni {
 		}
 	}
 
-    /**
-     * Pokreće izvršavanje menija.
-     * Kada korisnik odabere redni broj stavke koja nasleđuje klasu 
-     * {@code FunkcionalnaStavkaMenija} izvršava se njena metoda
-     * {@code izvrsi()}, a zatim se korisniku ponovo nudi odabir stavki iz
-     * menija.
-     * Kada korisnik odabere redni broj stavke koja nasleđuje klasu 
-     * {@code IzlaznaStavkaMenija} izvršavanje menija se zaustavlja.
-     * 
-     * Stavke će dobiti redni broj na osnovu njihovog indeksa u nizu {@code stavke}.
-     *
-     * @param      naslov   Naslov koji će biti prikazan
-     * @param      stavke   Niz objekata klase {@code StavkaMenija} koji opisuju
-     *                      stavke
-     *
-     * @throws  IllegalArgumentException Ako su {@code naslov} ili
-     *          {@code stavke} {@code null} ili ako su prazni, ili ako atribut
-     *          {@code izlaz} za bar jednu stavku nije {@code true}
-     *
-     */
+	/**
+	 * Pokreće izvršavanje menija. Kada korisnik odabere redni broj stavke koja
+	 * nasleđuje klasu {@code FunkcionalnaStavkaMenija} izvršava se njena metoda
+	 * {@code izvrsi()}, a zatim se korisniku ponovo nudi odabir stavki iz menija.
+	 * Kada korisnik odabere redni broj stavke koja nasleđuje klasu
+	 * {@code IzlaznaStavkaMenija} izvršavanje menija se zaustavlja.
+	 * 
+	 * Stavke će dobiti redni broj na osnovu njihovog indeksa u nizu {@code stavke}.
+	 *
+	 * @param naslov Naslov koji će biti prikazan
+	 * @param stavke Niz objekata klase {@code StavkaMenija} koji opisuju stavke
+	 *
+	 * @throws IllegalArgumentException Ako su {@code naslov} ili {@code stavke}
+	 *                                  {@code null} ili ako su prazni, ili ako
+	 *                                  atribut {@code izlaz} za bar jednu stavku
+	 *                                  nije {@code true}
+	 *
+	 */
 	public static void pokreni(String naslov, StavkaMenija[] stavke) throws IllegalArgumentException {
 		Meni meni = new Meni(naslov, stavke);
 		meni.pokreni();
