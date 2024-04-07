@@ -47,7 +47,8 @@ public class Racun {
 
 	@Override
 	public String toString() {
-		return "Racun [id=" + id + ", datum=" + datum + ", ukupnaCena=" + ukupnaCena + "]";
+		return "Racun [id=" + id + ", datum=" + Prodavnica.getDateTimeFormatter().format(datum) + ", ukupnaCena="
+				+ ukupnaCena + "]";
 	}
 
 	public long getId() {

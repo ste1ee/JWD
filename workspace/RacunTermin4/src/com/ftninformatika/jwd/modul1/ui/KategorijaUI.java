@@ -38,14 +38,13 @@ public class KategorijaUI {
 			return;
 		}
 		System.out.println(kategorija);
-		;
 	}
 
 	private static void dodavanje() {
 		long id = Prodavnica.nextKategorijaId();
 		String naziv = "";
 		while (naziv.equals("")) {
-			naziv = Konzola.ocitajString("Unesi naziv:");
+			naziv = Konzola.ocitajString("Unesi naziv");
 		}
 		Kategorija kategorija = new Kategorija(id, naziv);
 

@@ -23,7 +23,6 @@ public class Prodavnica {
 	private static final Path STAVKE_PATH = Paths.get(DATA_FOLDER, "stavke.csv");
 	private static final Path RACUNI_PATH = Paths.get(DATA_FOLDER, "racuni.csv");
 	private static final Path PROIZVODKATEGORIJA_PATH = Paths.get(DATA_FOLDER, "proizvodKategorija.csv");
-	private static final Path RACUNSTAVKA_PATH = Paths.get(DATA_FOLDER, "racunStavka.csv");
 
 	private static final Map<Long, Kategorija> kategorije = new HashMap<>();
 	private static final Map<Long, Proizvod> proizvodi = new HashMap<>();
@@ -50,11 +49,11 @@ public class Prodavnica {
 		Proizvod proizvod4 = new Proizvod(4, "Mleveno Junece KG", 849.99);
 		Proizvod proizvod5 = new Proizvod(5, "Mars", 89.99);
 
-		Stavka stavka1 = new Stavka(1, 1);
-		Stavka stavka2 = new Stavka(2, 2);
-		Stavka stavka3 = new Stavka(3, 3);
-		Stavka stavka4 = new Stavka(4, 4);
-		Stavka stavka5 = new Stavka(5, 5);
+		Stavka stavka1 = new Stavka(1, 1, proizvod1);
+		Stavka stavka2 = new Stavka(2, 2, proizvod2);
+		Stavka stavka3 = new Stavka(3, 3, proizvod3);
+		Stavka stavka4 = new Stavka(4, 4, proizvod4);
+		Stavka stavka5 = new Stavka(5, 5, proizvod5);
 
 		Racun racun1 = new Racun(1, LocalDateTime.now(), 0.0);
 		Racun racun2 = new Racun(2, LocalDateTime.now(), 0.0);
@@ -155,17 +154,6 @@ public class Prodavnica {
 		Files.write(RACUNI_PATH, linije);
 	}
 
-	private static void sacuvajRacunStavka() throws IOException {
-		List<String> linije = new ArrayList<>();
-		for (Racun r : racuni.values()) {
-			for (Stavka s : r.getStavke()) {
-				String linija = String.join(",", String.valueOf(r.getId()), String.valueOf(s.getId()));
-				linije.add(linija);
-			}
-		}
-		Files.write(RACUNSTAVKA_PATH, linije);
-	}
-
 	public static void sacuvaj() throws IOException {
 		sacuvajKategorije();
 		sacuvajProizvode();
@@ -217,7 +205,7 @@ public class Prodavnica {
 			int kolicina = Integer.parseInt(tokeni[1]);
 			long proizvodId = Long.parseLong(tokeni[2]);
 			Proizvod proizvod = proizvodi.get(proizvodId);
-			Stavka stavka = new Stavka(id, kolicina);
+			Stavka stavka = new Stavka(id, kolicina, proizvod);
 			stavke.put(stavka.getId(), stavka);
 
 			maxStavkaId++;
@@ -228,21 +216,12 @@ public class Prodavnica {
 		for (String l : Files.readAllLines(RACUNI_PATH)) {
 			String[] tokeni = l.split(",");
 			long id = Long.parseLong(tokeni[0]);
-			LocalDateTime datumIVreme = LocalDateTime.parse(tokeni[1], DATE_TIME_FORMATTER);
+			LocalDateTime datumIVreme = LocalDateTime.parse(tokeni[1]);
 			double ukupnaCena = Double.parseDouble(tokeni[2]);
 			Racun racun = new Racun(id, datumIVreme, ukupnaCena);
 			racuni.put(racun.getId(), racun);
 
 			maxRacunId++;
-		}
-	}
-
-	private static void ucitajRacunStavka() throws IOException {
-		for (String l : Files.readAllLines(RACUNSTAVKA_PATH)) {
-			String[] tokeni = l.split(",");
-			long racunId = Long.parseLong(tokeni[0]);
-			long stavkaId = Long.parseLong(tokeni[1]);
-			racuni.get(racunId).addStavka(stavke.get(stavkaId));
 		}
 	}
 
@@ -253,7 +232,6 @@ public class Prodavnica {
 			ucitajProizvodKategorija();
 			ucitajStavke();
 			ucitajRacune();
-			ucitajRacunStavka();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			inicijalizuj();
@@ -297,6 +275,10 @@ public class Prodavnica {
 	public static long nextRacunId() {
 		maxRacunId++;
 		return maxRacunId;
+	}
+
+	public static DateTimeFormatter getDateTimeFormatter() {
+		return DATE_TIME_FORMATTER;
 	}
 
 }

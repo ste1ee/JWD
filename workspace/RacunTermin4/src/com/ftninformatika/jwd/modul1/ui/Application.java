@@ -1,7 +1,5 @@
 package com.ftninformatika.jwd.modul1.ui;
 
-import java.io.IOException;
-
 import com.ftninformatika.jwd.modul1.uti.model.Prodavnica;
 import com.ftninformatika.jwd.modul1.util.Meni;
 import com.ftninformatika.jwd.modul1.util.Meni.IzlaznaStavkaMenija;
@@ -26,21 +24,21 @@ public class Application {
 
 					@Override
 					public void izvrsi() {
-						// TODO Auto-generated method stub
+						ProizvodUI.meni();
 
 					}
 				}, new FunkcionalnaStavkaMenija("Stavka") {
 
 					@Override
 					public void izvrsi() {
-						// TODO Auto-generated method stub
+						StavkaUI.meni();
 
 					}
 				}, new FunkcionalnaStavkaMenija("Racun") {
 
 					@Override
 					public void izvrsi() {
-						// TODO Auto-generated method stub
+						RacunUI.meni();
 
 					}
 				},

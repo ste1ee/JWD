@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Konzola"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Meni"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Meni.FunkcionalnaStavkaMenija"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.ui.KategorijaUI"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.uti.model.Prodavnica"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Konzola"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.ui.StavkaUI"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.uti.model.Stavka"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.ui.RacunUI"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.uti.model.Racun"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
 </qualifiedTypeNameHistroy>

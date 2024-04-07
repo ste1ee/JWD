@@ -46,7 +46,7 @@ public class Proizvod {
 
 	@Override
 	public String toString() {
-		return "Proizvod [id=" + id + ", naziv=" + naziv + ", cena=" + cena + "]";
+		return "Proizvod [id=" + id + ", naziv=" + naziv + ", cena=" + cena + ", kategorije=" + kategorije + "]";
 	}
 
 	public long getId() {

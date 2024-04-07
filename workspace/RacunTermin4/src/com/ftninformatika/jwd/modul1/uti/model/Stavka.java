@@ -8,16 +8,19 @@ public class Stavka {
 
 	Proizvod proizvod;
 
-	public Stavka(long id, int kolicina) {
+	public Stavka(long id, int kolicina, Proizvod proizvod) {
 		super();
 		this.id = id;
 		this.kolicina = kolicina;
+		this.proizvod = proizvod;
+	}
+
+	public Stavka(int kolicina, Proizvod proizvod) {
+		this(0, kolicina, proizvod);
 	}
 
 	public Stavka() {
-		super();
-		this.id = 0;
-		this.kolicina = 0;
+		this(0, 0, null);
 	}
 
 	@Override
@@ -39,7 +42,7 @@ public class Stavka {
 
 	@Override
 	public String toString() {
-		return "Stavka [id=" + id + ", kolicina=" + kolicina + "]";
+		return "Stavka [id=" + id + ", kolicina=" + kolicina + ", proizvod=" + proizvod + "]";
 	}
 
 	public long getId() {
