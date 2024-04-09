@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-17"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -41,7 +42,7 @@
 		<item key="Objects.equals &amp; Objects.hash" value="true"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
-		<item key="DIALOG_X_ORIGIN" value="420"/>
+		<item key="DIALOG_X_ORIGIN" value="291"/>
 		<item key="DIALOG_Y_ORIGIN" value="176"/>
 		<item key="DIALOG_WIDTH" value="677"/>
 		<item key="DIALOG_HEIGHT" value="840"/>
@@ -52,8 +53,8 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="410"/>
-		<item key="DIALOG_Y_ORIGIN" value="209"/>
+		<item key="DIALOG_X_ORIGIN" value="1070"/>
+		<item key="DIALOG_Y_ORIGIN" value="132"/>
 		<item key="DIALOG_WIDTH" value="677"/>
 		<item key="DIALOG_HEIGHT" value="851"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|8.765218|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -68,18 +69,18 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="419"/>
-		<item key="DIALOG_Y_ORIGIN" value="233"/>
-		<item key="DIALOG_WIDTH" value="517"/>
-		<item key="DIALOG_HEIGHT" value="678"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_X_ORIGIN" value="1165"/>
+		<item key="DIALOG_Y_ORIGIN" value="133"/>
+		<item key="DIALOG_WIDTH" value="677"/>
+		<item key="DIALOG_HEIGHT" value="832"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|8.765218|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="DialogBounds_GenerateHashCodeEqualsDialog">
-		<item key="DIALOG_X_ORIGIN" value="420"/>
+		<item key="DIALOG_X_ORIGIN" value="291"/>
 		<item key="DIALOG_Y_ORIGIN" value="253"/>
-		<item key="DIALOG_WIDTH" value="516"/>
-		<item key="DIALOG_HEIGHT" value="594"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="677"/>
+		<item key="DIALOG_HEIGHT" value="729"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|8.765218|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="600"/>

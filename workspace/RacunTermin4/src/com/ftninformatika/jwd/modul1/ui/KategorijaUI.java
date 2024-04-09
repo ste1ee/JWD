@@ -28,7 +28,6 @@ public class KategorijaUI {
 		Map<Long, Kategorija> kategorije = Prodavnica.getKategorije();
 		for (Kategorija k : kategorije.values()) {
 			System.out.println(k);
-			;
 		}
 	}
 
