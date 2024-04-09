@@ -20,4 +20,12 @@
     <fullyQualifiedTypeName name="util.Konzola"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin4.model.Korisnik"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin4.util.Konzola"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin4.model.Admin"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin4.model.Radnik"/>
+    <fullyQualifiedTypeName name="javax.swing.text.DateFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>
