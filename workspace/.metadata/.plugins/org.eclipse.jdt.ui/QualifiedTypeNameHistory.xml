@@ -28,4 +28,8 @@
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin4.model.Radnik"/>
     <fullyQualifiedTypeName name="javax.swing.text.DateFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.automobili.model.ElektricniAutomobil"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.geometrija.model.Poligon"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.geometrija.model.impl.Trougao"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.geometrija.model.impl.Pravougaonik"/>
 </qualifiedTypeNameHistroy>
