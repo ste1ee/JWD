@@ -27,8 +27,8 @@ public class Bioskop {
 	private static long maxProjekcijaId = 0;
 	
 	private static void inicijalizuj() {
-		// kreiranje žanrova
-		zanrovi.put(1L, new Zanr(1L, "naučna fantastika"));
+		// kreiranje Å¾anrova
+		zanrovi.put(1L, new Zanr(1L, "nauÄ�na fantastika"));
 		zanrovi.put(2L, new Zanr(2L, "akcija"));
 		zanrovi.put(3L, new Zanr(3L, "komedija"));
 		zanrovi.put(4L, new Zanr(4L, "horor"));
@@ -40,7 +40,7 @@ public class Bioskop {
 		filmovi.put(3L, new Film(3L, "It: Chapter 2", 170));
 		filmovi.put(4L, new Film(4L, "Pirates of the Caribbean: Dead Men Tell No Tales", 153));
 
-		// povezivanje filmova i žanrova
+		// povezivanje filmova i Å¾anrova
 		filmovi.get(1L).addZanr(zanrovi.get(1L));
 		filmovi.get(2L).addZanr(zanrovi.get(1L));
 		filmovi.get(1L).addZanr(zanrovi.get(2L));
@@ -50,6 +50,7 @@ public class Bioskop {
 		filmovi.get(3L).addZanr(zanrovi.get(4L));
 		filmovi.get(1L).addZanr(zanrovi.get(5L));
 		filmovi.get(4L).addZanr(zanrovi.get(5L));
+		filmovi.get(1L).addZanr(zanrovi.get(3L));
 
 		// kreiranje i projekcija i povezivanje projekcija i filmova
 		projekcije.put(1L, new Projekcija(1L, LocalDateTime.parse("2020-06-22T20:00:00"), filmovi.get(1L), 1, "2D", 380.00));
@@ -68,7 +69,7 @@ public class Bioskop {
 		maxProjekcijaId = 10L;
 	}
 
-	// funkcije za čuvanje
+	// funkcije za Ä�uvanje
 	private static void sacuvajZanrove() throws IOException {
 		List<String> linije = new ArrayList<>();
 		for (Zanr itZanr: zanrovi.values()) {
@@ -131,7 +132,7 @@ public class Bioskop {
 		sacuvajProjekcije();
 	}
 
-	// funkcije za učitavanje
+	// funkcije za uÄ�itavanje
 	private static void ucitajZanrove() throws IOException {
 		for (String itLinija: Files.readAllLines(ZANROVI_PATH)) {
 			String[] tokeni = itLinija.split(",");
@@ -189,13 +190,13 @@ public class Bioskop {
 
 	public static void ucitaj() throws IOException {
 		try {
-			// redosled učitavanja je bitan
+			// redosled uÄ�itavanja je bitan
 			ucitajZanrove();
 			ucitajFilmove();
 			ucitajFilmZanr();
 			ucitajProjekcije();
 		} catch (IOException ex) {
-			// u slučaju da datoteke nisu pronađene, model se reset-uje na početno stanje
+			// u sluÄ�aju da datoteke nisu pronaÄ‘ene, model se reset-uje na poÄ�etno stanje
 			inicijalizuj();
 			sacuvaj();
 

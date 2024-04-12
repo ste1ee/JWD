@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=Modul1Termin6Automobili/src&lt;com.ftninformatika.jwd.modul1.termin6.automobili.model{AutomobilNaGorivo.java[AutomobilNaGorivo" modifiers="513" timestamp="1681501938000"/>
-    <typeInfo handle="=Modul1Termin6Automobili/src&lt;com.ftninformatika.jwd.modul1.termin6.automobili.model{ElektricniAutomobil.java[ElektricniAutomobil" modifiers="513" timestamp="1681501944000"/>
+    <typeInfo handle="=Modul1Termin6Automobili/src&lt;com.ftninformatika.jwd.modul1.termin6.automobili.model{AutomobilNaGorivo.java[AutomobilNaGorivo" modifiers="513" timestamp="1712873155824"/>
+    <typeInfo handle="=Modul1Termin6Automobili/src&lt;com.ftninformatika.jwd.modul1.termin6.automobili.model{ElektricniAutomobil.java[ElektricniAutomobil" modifiers="513" timestamp="1712873156968"/>
     <typeInfo handle="=Modul1Termin6Automobili/src&lt;com.ftninformatika.jwd.modul1.termin6.automobili.model.impl{AutomobilImpl.java[AutomobilImpl" modifiers="1025" timestamp="1663064358000"/>
     <typeInfo handle="=Modul1Termin6Automobili/src&lt;com.ftninformatika.jwd.modul1.termin6.automobili.model{HibridniAutomobil.java[HibridniAutomobil" modifiers="513" timestamp="1712872182811"/>
-    <typeInfo handle="=Modul1Termin6Geometrija/src&lt;com.ftninformatika.jwd.modul1.termin6.geometrija.model{GeometrijskiOblik.java[GeometrijskiOblik" modifiers="513" timestamp="1681496518000"/>
-    <typeInfo handle="=Modul1Termin6Geometrija/src&lt;com.ftninformatika.jwd.modul1.termin6.geometrija.model{Poligon.java[Poligon" modifiers="513" timestamp="1712873887811"/>
+    <typeInfo handle="=Modul1Termin6Geometrija/src&lt;com.ftninformatika.jwd.modul1.termin6.geometrija.model{GeometrijskiOblik.java[GeometrijskiOblik" modifiers="513" timestamp="1712875175236"/>
+    <typeInfo handle="=Modul1Termin6Geometrija/src&lt;com.ftninformatika.jwd.modul1.termin6.geometrija.model{Poligon.java[Poligon" modifiers="513" timestamp="1712875176436"/>
     <typeInfo handle="=Modul1Termin6Geometrija/src&lt;com.ftninformatika.jwd.modul1.termin6.geometrija.model.impl{Cetvorougao.java[Cetvorougao" modifiers="1025" timestamp="1712874952963"/>
 </typeInfoHistroy>

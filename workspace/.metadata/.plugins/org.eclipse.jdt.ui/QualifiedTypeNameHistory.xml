@@ -32,4 +32,8 @@
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.geometrija.model.Poligon"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.geometrija.model.impl.Trougao"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.geometrija.model.impl.Pravougaonik"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.bioskop.model.Film"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
