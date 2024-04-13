@@ -4,12 +4,10 @@
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Meni.FunkcionalnaStavkaMenija"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.ui.KategorijaUI"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.uti.model.Prodavnica"/>
-    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Konzola"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.ui.StavkaUI"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.uti.model.Stavka"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.ui.RacunUI"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.uti.model.Racun"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="model.Igrac"/>
@@ -18,7 +16,6 @@
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="model.Savez"/>
     <fullyQualifiedTypeName name="util.Konzola"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin4.model.Korisnik"/>
@@ -36,4 +33,20 @@
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin6.bioskop.model.Film"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin7.bioskop.dao.impl.database.DatabaseFilmDAO"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin7.bioskop.ui.FilmoviUI"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.PreparableStatement"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin7.bioskop.dao.impl.database.DatabaseZanrDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin7.bioskop.model.Bioskop"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin7.bioskop.model.Film"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.termin7.bioskop.dao.impl.database.DatabaseProjekcijeDAO"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.jwd.modul1.util.Konzola"/>
 </qualifiedTypeNameHistroy>

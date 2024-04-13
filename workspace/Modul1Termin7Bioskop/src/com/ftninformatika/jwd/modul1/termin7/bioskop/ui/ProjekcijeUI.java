@@ -17,32 +17,25 @@ import com.ftninformatika.jwd.modul1.util.Meni.StavkaMenija;
 public class ProjekcijeUI {
 
 	private static ProjekcijaDAO projekcijaDAO;
-	
+
 	public static void setProjekcijaDAO(ProjekcijaDAO projekcijaDAO) {
 		ProjekcijeUI.projekcijaDAO = projekcijaDAO;
 	}
 
-	private static final Tabela<Projekcija> TABELA = new Tabela<>(
-			"%5s %20s %-50s %5s %5s %10s",
-			new Object[] {"ID", "Datum i vreme", "Film", "Sala", "Tip", "Cena karte"}
-		) {
+	private static final Tabela<Projekcija> TABELA = new Tabela<>("%5s %20s %-50s %5s %5s %10s",
+			new Object[] { "ID", "Datum i vreme", "Film", "Sala", "Tip", "Cena karte" }) {
 
-			@Override
-			protected List<Object[]> uredi(Projekcija vrednost) {
-				List<Object[]> rezultat = new ArrayList<>();
-				rezultat.add(new Object[] {
-					vrednost.getId(), 
-					Konzola.formatiraj(vrednost.getDatumIVreme()),
-					(vrednost.getFilm() != null)? vrednost.getFilm().getNaziv(): "", // many-to-one veza
-					vrednost.getSala(),
-					vrednost.getTip(),
-					vrednost.getCenaKarte()
-				});
-				return rezultat;
-			}
-	
+		@Override
+		protected List<Object[]> uredi(Projekcija vrednost) {
+			List<Object[]> rezultat = new ArrayList<>();
+			rezultat.add(new Object[] { vrednost.getId(), Konzola.formatiraj(vrednost.getDatumIVreme()),
+					(vrednost.getFilm() != null) ? vrednost.getFilm().getNaziv() : "", // many-to-one veza
+					vrednost.getSala(), vrednost.getTip(), vrednost.getCenaKarte() });
+			return rezultat;
+		}
+
 	};
-	
+
 	public static Projekcija pronalazenje() throws Exception {
 		prikazSvih();
 
@@ -50,18 +43,18 @@ public class ProjekcijeUI {
 
 		Projekcija projekcija = projekcijaDAO.get(id);
 		if (projekcija == null)
-			Konzola.prikazi("Projekcija nije pronađena!");
+			Konzola.prikazi("Projekcija nije pronaÄ‘ena!");
 
 		return projekcija;
 	}
-	
+
 	private static void prikazSvih() {
 		try {
 			Collection<Projekcija> projekcije = projekcijaDAO.getAll();
 			TABELA.prikazi(projekcije);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Došlo je do greške!");
+			System.out.println("DoÅ¡lo je do greÅ¡ke!");
 		}
 	}
 
@@ -70,11 +63,11 @@ public class ProjekcijeUI {
 			Projekcija projekcija = pronalazenje();
 			if (projekcija == null)
 				return;
-			
+
 			TABELA.prikazi(projekcija);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Došlo je do greške!");
+			System.out.println("DoÅ¡lo je do greÅ¡ke!");
 		}
 	}
 
@@ -98,18 +91,18 @@ public class ProjekcijeUI {
 
 		Projekcija projekcija = new Projekcija(datumIVreme, null, sala, tip, cenaKarte);
 		try {
-			// čuvanje
+			// Ä�uvanje
 			projekcijaDAO.add(projekcija);
-			Konzola.prikazi("Uspešno dodavanje!");
+			Konzola.prikazi("UspeÅ¡no dodavanje!");
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Došlo je do greške!");
+			System.out.println("DoÅ¡lo je do greÅ¡ke!");
 		}
 	}
 
 	private static void izmena() {
 		try {
-			// pronalaženje postojećeg
+			// pronalaÅ¾enje postojeÄ‡eg
 			Projekcija projekcija = pronalazenje();
 			if (projekcija == null)
 				return;
@@ -135,65 +128,69 @@ public class ProjekcijeUI {
 				cenaKarte = Konzola.ocitajDouble("Unesite cenu karte");
 			projekcija.setCenaKarte(cenaKarte);
 
-			// čuvanje
+			// Ä�uvanje
 			projekcijaDAO.update(projekcija);
-			Konzola.prikazi("Uspešna izmena!");
+			Konzola.prikazi("UspeÅ¡na izmena!");
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Došlo je do greške!");
+			System.out.println("DoÅ¡lo je do greÅ¡ke!");
 		}
 	}
 
 	private static void brisanje() {
 		try {
-			// pronalaženje postojećeg
+			// pronalaÅ¾enje postojeÄ‡eg
 			Projekcija projekcija = pronalazenje();
 			if (projekcija == null)
 				return;
 
-			// čuvanje
+			// Ä�uvanje
 			projekcijaDAO.delete(projekcija.getId());
-			Konzola.prikazi("Uspešno brisanje!");
+			Konzola.prikazi("UspeÅ¡no brisanje!");
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Došlo je do greške!");
+			System.out.println("DoÅ¡lo je do greÅ¡ke!");
 		}
 	}
-	
+
 	public static void meni() {
-		Meni.pokreni("Projekcije", new StavkaMenija[] {
-			new IzlaznaStavkaMenija("Porvratak"),
-			new FunkcionalnaStavkaMenija("Prikaz svih") {
+		Meni.pokreni("Projekcije",
+				new StavkaMenija[] { new IzlaznaStavkaMenija("Porvratak"), new FunkcionalnaStavkaMenija("Prikaz svih") {
 
-				@Override
-				public void izvrsi() { prikazSvih(); }
+					@Override
+					public void izvrsi() {
+						prikazSvih();
+					}
 
-			},
-			new FunkcionalnaStavkaMenija("Prikaz") {
+				}, new FunkcionalnaStavkaMenija("Prikaz") {
 
-				@Override
-				public void izvrsi() { prikaz(); }
+					@Override
+					public void izvrsi() {
+						prikaz();
+					}
 
-			},
-			new FunkcionalnaStavkaMenija("Dodavanje") {
+				}, new FunkcionalnaStavkaMenija("Dodavanje") {
 
-				@Override
-				public void izvrsi() { dodavanje(); }
+					@Override
+					public void izvrsi() {
+						dodavanje();
+					}
 
-			},
-			new FunkcionalnaStavkaMenija("Izmena") {
+				}, new FunkcionalnaStavkaMenija("Izmena") {
 
-				@Override
-				public void izvrsi() { izmena(); }
+					@Override
+					public void izvrsi() {
+						izmena();
+					}
 
-			},
-			new FunkcionalnaStavkaMenija("Brisanje") {
+				}, new FunkcionalnaStavkaMenija("Brisanje") {
 
-				@Override
-				public void izvrsi() { brisanje(); }
+					@Override
+					public void izvrsi() {
+						brisanje();
+					}
 
-			}
-		});
+				} });
 	}
-	
+
 }
