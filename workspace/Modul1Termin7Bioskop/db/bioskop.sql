@@ -40,7 +40,7 @@ CREATE TABLE projekcije ( -- many-to-one veza
 CREATE TABLE korisnici (
 	korisnickoIme VARCHAR(20),
 	lozinka VARCHAR(20) NOT NULL,
-	eMail VARCHAR(20) NOT NULL,
+	eMail VARCHAR(50) NOT NULL,
 	pol ENUM('muški', 'ženski') DEFAULT 'muški',
 	administrator BOOL DEFAULT false,
 	PRIMARY KEY(korisnickoIme)
