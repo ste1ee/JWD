@@ -10,6 +10,10 @@
     <typeInfo handle="=Modul1Termin7Bioskop/src&lt;com.ftninformatika.jwd.modul1.termin7.bioskop.dao{ZanrDAO.java[ZanrDAO" modifiers="513" timestamp="1681822216000"/>
     <typeInfo handle="=Modul1Termin7Bioskop/src&lt;com.ftninformatika.jwd.modul1.termin7.bioskop.dao{ProjekcijaDAO.java[ProjekcijaDAO" modifiers="513" timestamp="1681820338000"/>
     <typeInfo handle="=Modul1Termin7Bioskop/src&lt;com.ftninformatika.jwd.modul1.termin7.bioskop.dao{KorisnikDAO.java[KorisnikDAO" modifiers="513" timestamp="1713034596612"/>
-    <typeInfo handle="=Voz/src&lt;dao{VozDAO.java[VozDAO" modifiers="513" timestamp="1713474675491"/>
+    <typeInfo handle="=Voz/src&lt;dao{VozDAO.java[VozDAO" modifiers="513" timestamp="1713522055743"/>
     <typeInfo handle="=Voz/src&lt;dao{KartaDAO.java[KartaDAO" modifiers="513" timestamp="1713476031690"/>
+    <typeInfo handle="=Vakcinacija/src&lt;dao{VakcinaDAO.java[VakcinaDAO" modifiers="513" timestamp="1713550913151"/>
+    <typeInfo handle="=Vakcinacija/src&lt;dao{PrijavaDAO.java[PrijavaDAO" modifiers="513" timestamp="1713548172725"/>
+    <typeInfo handle="=Sportpass/src&lt;dao{PaketDAO.java[PaketDAO" modifiers="513" timestamp="1713738216686"/>
+    <typeInfo handle="=Sportpass/src&lt;dao{ClanarinaDAO.java[ClanarinaDAO" modifiers="513" timestamp="1713738217982"/>
 </typeInfoHistroy>
