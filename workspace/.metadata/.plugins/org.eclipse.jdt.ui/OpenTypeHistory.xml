@@ -16,4 +16,8 @@
     <typeInfo handle="=Vakcinacija/src&lt;dao{PrijavaDAO.java[PrijavaDAO" modifiers="513" timestamp="1713548172725"/>
     <typeInfo handle="=Sportpass/src&lt;dao{PaketDAO.java[PaketDAO" modifiers="513" timestamp="1713738216686"/>
     <typeInfo handle="=Sportpass/src&lt;dao{ClanarinaDAO.java[ClanarinaDAO" modifiers="513" timestamp="1713738217982"/>
+    <typeInfo handle="=Telefonija/src&lt;dao{TarifaDAO.java[TarifaDAO" modifiers="513" timestamp="1713960063558"/>
+    <typeInfo handle="=Telefonija/src&lt;dao{PretplataDAO.java[PretplataDAO" modifiers="513" timestamp="1713966461604"/>
+    <typeInfo handle="=Porudzbine/src&lt;dao{ProizvodDAO.java[ProizvodDAO" modifiers="513" timestamp="1714249680236"/>
+    <typeInfo handle="=Porudzbine/src&lt;dao{PorudzbinaDAO.java[PorudzbinaDAO" modifiers="513" timestamp="1714250159226"/>
 </typeInfoHistroy>

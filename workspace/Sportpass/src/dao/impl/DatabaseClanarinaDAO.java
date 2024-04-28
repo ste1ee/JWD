@@ -23,7 +23,8 @@ public class DatabaseClanarinaDAO implements ClanarinaDAO {
 	@Override
 	public Collection<Clanarina> getAll() throws Exception {
 		Collection<Clanarina> clanarine = new ArrayList<>();
-		String sql = "SELECT c.id, c.paketId, c.korisnik, c.pocetak, p.naziv, p.brtr, p.meseci, p.cena FROM clanarine c\r\n"
+		String sql = 
+				"SELECT c.id, c.paketId, c.korisnik, c.pocetak, p.naziv, p.brtr, p.meseci, p.cena FROM clanarine c\r\n"
 				+ "JOIN paketi p ON c.paketId = p.id";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			try (ResultSet rset = stmt.executeQuery()) {
@@ -53,7 +54,8 @@ public class DatabaseClanarinaDAO implements ClanarinaDAO {
 
 	@Override
 	public void add(Clanarina clanarina) throws Exception {
-		String sql = "INSERT INTO clanarine (paketId, korisnik, pocetak) VALUES (?, ?, ?)";
+		String sql = 
+				"INSERT INTO clanarine (paketId, korisnik, pocetak) VALUES (?, ?, ?)";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			int param = 0;
 			stmt.setLong(++param, clanarina.getPaket().getId());

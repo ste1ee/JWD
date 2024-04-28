@@ -2,7 +2,6 @@ package taxi.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
-
 import com.ftninformatika.jwd.modul1.util.Konzola;
 
 public class Poziv {

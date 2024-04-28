@@ -18,7 +18,8 @@ public class DatabasePaketDAO implements PaketDAO {
 	@Override
 	public Paket get(long id) throws Exception {
 		Paket paket = null;
-		String sql = "SELECT naziv, brtr, meseci, cena FROM paketi WHERE id = ?";
+		String sql = 
+				"SELECT naziv, brtr, meseci, cena FROM paketi WHERE id = ?";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			int param = 0;
 			stmt.setLong(++param, id);
@@ -40,7 +41,8 @@ public class DatabasePaketDAO implements PaketDAO {
 	@Override
 	public Paket getPoNazivu(String naziv) throws Exception {
 		Paket paket = null;
-		String sql = "SELECT id, brtr, meseci, cena FROM paketi WHERE naziv = ?";
+		String sql = 
+				"SELECT id, brtr, meseci, cena FROM paketi WHERE naziv = ?";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			int param = 0;
 			stmt.setString(++param, naziv);
