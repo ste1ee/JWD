@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.model.Korisnik"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.web.Dostava"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.model.Porudzbina"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.model.StavkaPorudzbine"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.model.Restoran"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.model.Kategorija"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="com.ftninformatika.modul2.restoran.model.Artikal"/>
+</qualifiedTypeNameHistroy>

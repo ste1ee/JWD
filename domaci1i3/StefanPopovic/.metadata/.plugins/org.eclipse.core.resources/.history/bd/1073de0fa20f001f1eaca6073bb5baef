@@ -1,0 +1,5 @@
+package com.ftninformatika.modul2.restoran.model;
+
+public class Kategorija {
+
+}
